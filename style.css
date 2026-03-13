@@ -1,118 +1,202 @@
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI',sans-serif;
+}
+
+body{
 color:white;
-background:linear-gradient(135deg,#ff00cc,#3333ff,#00ffe5);
+background:linear-gradient(-45deg,#ff0080,#7928ca,#2afadf,#ffcc00);
 background-size:400% 400%;
-animation:bgmove 12s infinite alternate;
+animation:bgmove 15s ease infinite;
 }
 
 @keyframes bgmove{
 0%{background-position:0% 50%}
-100%{background-position:100% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
+/* NAV */
+
 nav{
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 padding:20px;
 text-align:center;
 position:sticky;
 top:0;
+z-index:999;
 }
 
 nav a{
 color:white;
-margin:0 20px;
+margin:0 18px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 font-size:18px;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#00ffe5;
-text-shadow:0 0 10px #00ffe5;
+color:#00fff7;
+text-shadow:0 0 10px #00fff7;
 }
 
+/* HERO */
+
 header{
-padding:140px 20px;
+padding:150px 20px;
 text-align:center;
-background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(0,0,0,0.9));
+background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.9));
 }
 
 h1{
 font-size:70px;
-color:#ff00cc;
+color:#ff2bd6;
 text-shadow:
-0 0 10px #ff00cc,
-0 0 20px #ff00cc,
-0 0 40px #ff00cc;
+0 0 10px #ff2bd6,
+0 0 25px #ff2bd6,
+0 0 50px #ff2bd6;
 }
 
 header p{
 font-size:22px;
+margin-top:15px;
 }
 
-section{
-padding:80px 10%;
-text-align:center;
-}
-
-h2{
-font-size:40px;
-margin-bottom:40px;
-color:#00ffe5;
-text-shadow:0 0 10px #00ffe5;
-}
-
-.card{
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
-padding:35px;
-border-radius:15px;
-margin:20px;
-display:inline-block;
-width:260px;
-transition:0.4s;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:
-0 0 20px #ff00cc,
-0 0 40px #00ffe5;
-}
-
-.card h3{
-color:#ffea00;
-}
+/* CTA BUTTON */
 
 button{
-background:linear-gradient(45deg,#ff00cc,#ffea00);
+background:linear-gradient(45deg,#ff2bd6,#ffcc00);
 border:none;
-padding:18px 40px;
-color:black;
+padding:18px 45px;
 font-size:20px;
-border-radius:40px;
+border-radius:50px;
+margin-top:30px;
 cursor:pointer;
-margin-top:20px;
-font-weight:bold;
+font-weight:700;
 transition:0.3s;
 }
 
 button:hover{
 transform:scale(1.1);
 box-shadow:
-0 0 20px #ff00cc,
-0 0 30px #ffea00;
+0 0 20px #ff2bd6,
+0 0 40px #ffcc00;
 }
 
-footer{
-background:rgba(0,0,0,0.8);
-padding:40px;
+/* SECTIONS */
+
+section{
+padding:90px 10%;
 text-align:center;
+}
+
+h2{
+font-size:45px;
+margin-bottom:50px;
+color:#00fff7;
+text-shadow:0 0 10px #00fff7;
+}
+
+/* CARD GRID */
+
+.card{
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
+padding:40px;
+border-radius:20px;
+margin:20px;
+display:inline-block;
+width:280px;
+transition:0.4s;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.05);
+box-shadow:
+0 0 20px #ff2bd6,
+0 0 40px #00fff7;
+}
+
+.card h3{
+color:#ffcc00;
+margin-bottom:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px #ff2bd6;
+}
+
+/* REVIEWS */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review{
+background:rgba(0,0,0,0.6);
+padding:30px;
+border-radius:15px;
+}
+
+.review strong{
+color:#ffcc00;
+}
+
+/* DEAL BANNER */
+
+.deal{
+background:linear-gradient(45deg,#ff2bd6,#ffcc00);
+color:black;
+padding:60px;
+border-radius:25px;
+font-weight:bold;
+}
+
+.deal h3{
+font-size:50px;
+}
+
+/* FOOTER */
+
+footer{
+background:rgba(0,0,0,0.85);
+padding:50px 20px;
+text-align:center;
+margin-top:80px;
+}
+
+footer p{
+margin:10px 0;
 color:#ccc;
-margin-top:60px;
+}
+
+footer a{
+color:#00fff7;
+text-decoration:none;
+}
+
+footer a:hover{
+text-shadow:0 0 10px #00fff7;
 }
